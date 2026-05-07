@@ -18,7 +18,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: eks
+        working-directory: EKS
 
     steps:
       - name: Checkout repository
@@ -27,8 +27,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: eu-central-1
-          role-to-assume: arn:aws:iam::123456789012:role/github-actions-role
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::038462771803:role/github-actions-role
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
