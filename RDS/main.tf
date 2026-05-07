@@ -23,7 +23,7 @@ resource "aws_db_instance" "this" {
   password = var.db_password
 
   db_subnet_group_name   = aws_db_subnet_group.this.name
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   publicly_accessible = false
 
