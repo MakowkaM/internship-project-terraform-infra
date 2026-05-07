@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.aws_region
-}
-
 # DB Subnet Group
 resource "aws_db_subnet_group" "this" {
   name       = "${var.db_name}-subnet-group"
