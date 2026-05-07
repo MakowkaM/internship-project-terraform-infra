@@ -13,7 +13,7 @@ resource "aws_db_instance" "this" {
   identifier = var.db_name
 
   engine         = "postgres"
-  engine_version = "15.4"
+  engine_version = null
 
   instance_class    = var.db_instance_class
   allocated_storage = var.allocated_storage
