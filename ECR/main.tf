@@ -1,5 +1,5 @@
-resource "aws_ecr_repository" "note" {
-  name                 = "noteapp"
+resource "aws_ecr_repository" "backend" {
+  name                 = "noteapp-backend"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
@@ -10,8 +10,26 @@ resource "aws_ecr_repository" "note" {
     encryption_type = "AES256"
   }
 
-   tags = {
+  tags = {
     Environment = "production"
-    Service     = "note"
+    Service     = "backend"
+  }
+}
+
+resource "aws_ecr_repository" "frontend" {
+  name                 = "noteapp-frontend"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  encryption_configuration {
+    encryption_type = "AES256"
+  }
+
+  tags = {
+    Environment = "production"
+    Service     = "frontend"
   }
 }
