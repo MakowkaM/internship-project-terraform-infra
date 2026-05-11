@@ -1,6 +1,6 @@
 aws_region = "us-east-1"
 
-db_name     = "appdb"
+db_name     = "notes"
 db_username = "poweradmin"
 db_password = "StrongPassword123!"
 
